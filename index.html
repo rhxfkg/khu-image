@@ -9,9 +9,16 @@
     <h1>Image Filter with WebAssembly</h1>
     <input type="file" id="imageInput">
     <canvas id="canvas"></canvas>
-    <button onclick="applyFilter('grayscale')">Grayscale</button>
-    <button onclick="applyFilter('sepia')">Sepia</button>
-    <button onclick="applyFilter('invert')">Invert Colors</button>
+    
+    <label for="grayscaleSlider">Grayscale</label>
+    <input type="range" id="grayscaleSlider" min="0" max="100" value="0">
+    
+    <label for="sepiaSlider">Sepia</label>
+    <input type="range" id="sepiaSlider" min="0" max="100" value="0">
+    
+    <label for="invertSlider">Invert Colors</label>
+    <input type="range" id="invertSlider" min="0" max="100" value="0">
+
     <script src="script.js"></script>
     <script src="filter.js"></script>
 </body>

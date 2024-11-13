@@ -20,6 +20,17 @@ document.getElementById("imageInput").addEventListener("change", function(event)
     reader.readAsDataURL(file);
 });
 
+// 슬라이더 이벤트 리스너 추가
+document.getElementById("grayscaleSlider").addEventListener("input", function() {
+    applyFilter("grayscale");
+});
+document.getElementById("sepiaSlider").addEventListener("input", function() {
+    applyFilter("sepia");
+});
+document.getElementById("invertSlider").addEventListener("input", function() {
+    applyFilter("invert");
+});
+
 // 필터 적용 함수
 function applyFilter(filterType) {
     if (!imageData) return;
